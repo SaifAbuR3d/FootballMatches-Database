@@ -1,0 +1,56 @@
+Functional dependecies : 
+
+Matches
+1. match_id -> match_time
+2. match_id -> stadium_id
+-----------------------------
+Teams
+1. team_id -> team_name
+2. team_id -> coach_id
+3. coach_id -> team_id 
+4. coach_id -> team_name
+-----------------------------
+Referees
+1. referee_id -> referee_name
+2. referee_id -> referee_nationality
+3. referee_id -> birth_date
+-----------------------------
+Coaches
+1. coach_id -> coach_name
+2. coach_id -> birth_date
+-----------------------------
+Stadiums
+1. stadium_id -> stadium_location
+2. stadium_id -> stadium_name
+3. stadium_id -> stadium_capacity
+-----------------------------
+Goals
+1. goal_id -> goal_minute
+2. goal_id -> player_id
+-----------------------------
+Players
+1. player_id -> player_name
+2. player_id -> player_position
+3. player_id -> birth_date
+4. player_id -> team_id
+-----------------------------
+Teams_Matches
+1. {team_id,match_id} -> final_score
+-----------------------------
+
+Normalization : 
+
+- All relations satisfy 1NF since there are no composite or multi-valued attributes. 
+- All relations satisfy 2NF since all relations are in 1NF and they do not contain any partial dependency.
+- All relations are in 3NF since there is no transitive dependency for non-prime attributes as well as they are in second normal form. 
+- All relations are in BCNF because for every functional dependency X -> Y in all relations, X is a superkey.  
+
+
+
+
+
+
+
+
+
+
